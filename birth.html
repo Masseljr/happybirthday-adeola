@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Adeola ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(120deg,#ff9a9e,#fad0c4);
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+max-width:500px;
+animation:fadeIn 2s ease;
+}
+
+h1{
+color:#ff4d6d;
+font-size:38px;
+}
+
+.names{
+font-size:22px;
+color:#555;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+color:#333;
+line-height:1.6;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#ff4d6d;
+color:white;
+font-size:18px;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff1e4d;
+transform:scale(1.05);
+}
+
+.surprise{
+display:none;
+margin-top:20px;
+font-size:20px;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* floating hearts */
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0); opacity:1;}
+100%{transform:translateY(-100vh); opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Happy Birthday 🎉</h1>
+
+<div class="names">
+Adeola ❤️ Omowunmi ❤️ Ayoka
+</div>
+
+<p>
+Today is not just a birthday, it's a celebration of the amazing woman you are.
+You bring light, happiness, and peace into my life in ways words can never fully explain.
+</p>
+
+<p>
+Adeola, my beautiful Omowunmi, my precious Ayoka,
+you deserve all the love, joy, and success this world can give.
+</p>
+
+<button onclick="showMessage()">Click for a Surprise 🎁</button>
+
+<div class="surprise">
+I love you today, tomorrow, and forever.  
+Happy Birthday my Queen 👑❤️
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.querySelector(".surprise").style.display="block";
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+10)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
